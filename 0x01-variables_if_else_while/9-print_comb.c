@@ -1,7 +1,4 @@
 /*
- * File: 9-print_comb.c
- * Auth: semuyai
- */
 
 #include <stdio.h>
 
