@@ -8,13 +8,16 @@
 
 int main(void)
 {
-	int x;
+        int x;
 
-	for (x = 58; x <= 67; x++)
-	{
-		putchar(x);
-	}
-	putchar('\n');
+        for (x = 58; x <= 67; x++)
+        {
+                putchar(x);
+        }
+        putchar('\n');
 
-	return (0);
+        return (0);
 }
+~
+~
+
