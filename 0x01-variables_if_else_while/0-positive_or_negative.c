@@ -1,18 +1,22 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
+/* more headers goes there */
 
+/* betty style doc for function main goes there */
 /**
-* main - this function checks whether a random number assigned to n
-* is positive or negative
-* Return: the function returns 0
-*/
+ * main - main function
+ * No Description:
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
@@ -27,3 +31,4 @@ int main(void)
 	}
 	return (0);
 }
+
