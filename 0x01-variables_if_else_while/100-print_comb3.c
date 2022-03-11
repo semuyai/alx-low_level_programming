@@ -1,24 +1,38 @@
 #include <stdio.h>
-
 /**
-* main - this is the main function
-* Description: It returns numbers from 00 to 99 with coma and space in between
-* Return: Function returns 0
-*/
+ * main - print numbers from 00 to 99.
+(*
+ * Return: 0 on success
+ */
 int main(void)
 {
-	int c;
+	int i = '0';
+	int j = '0';
 
-	for (c = 0; c <= 99; c++)
+	while (i <= '9')
 	{
-		putchar((c / 10) + '0');
-		putchar((c % 10) + '0');
-		if (c != 99)
+		while (j <= '9')
 		{
-			putchar(44);
-			putchar(32);
+			putchar(i);
+			putchar(j);
+			if (j == '9' && i == '9')
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			j++;
 		}
+		if (j >= '9')
+		{
+			j = '0';
+		}
+		i++;
 	}
-	putchar(10);
 	return (0);
 }
+
+
