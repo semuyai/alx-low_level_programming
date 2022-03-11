@@ -1,34 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
 /**
  * main - main function
- * No Description:
  * Return: 0
  */
 int main(void)
 {
-	int n;
+	int i;
+	int j;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-
-	if (n > 0)
+	for (i = 0; i < 10; i++)
 	{
-		printf("%d is positive\n", n);
+		for (j = 0; j < 10; j++)
+		{
+			putchar(i + '0');
+			putchar(j + '0');
+			if (i == 9 && j == 9)
+			{
+				break;
+			}
+			putchar(',');
+			putchar(' ');
+		}
 	}
-	else if (n == 0)
-	{
-		printf("%d is zero\n", n);
-	}
-	else
-	{
-		printf("%d is negative\n", n);
-	}
+	putchar('\n');
 	return (0);
 }
-
