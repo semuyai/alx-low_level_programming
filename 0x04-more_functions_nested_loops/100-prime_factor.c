@@ -1,26 +1,24 @@
 #include <stdio.h>
-#include <math.h>
+
 /**
- * main - prime numbers
+ * main -  checks for checks for a digit (0 through 9).
  *
  * Return: Always 0.
  */
 int main(void)
 {
+	long x, y;
 
-unsigned int long n = 612852475143, a = (int) sqrt(n);
+	x = 612852475143;
 
-while (1)
-{
-
-	if (n % a == 0)
+	for (y = 2; x > y; y++)
 	{
-		printf("%lu \n", n / a);
-		break;
+		while (x % y == 0)
+		{
+			x = x / y;
+		}
 	}
-	a--;
-
-}
-
-return (0);
+	printf("%lu", y);
+	putchar('\n');
+	return (0);
 }
